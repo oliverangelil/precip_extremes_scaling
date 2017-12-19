@@ -244,7 +244,7 @@ def scaling(omega, temp, plev, ps):
         dqsat_dp_total_omega[kbot]=0
 
     # integrate in the vertical
-    precip = -integrate(-dqsat_dp_total_omega,plev)/9.8066
+    precip = -integrate(-dqsat_dp_total_omega,plev)/pars('gravity')
 
     return precip
 
