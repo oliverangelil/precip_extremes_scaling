@@ -13,6 +13,6 @@ temp = np.linspace(270, 350, 10)
 plev = np.linspace(100000, 10000, 10)
 ps = 100000
 
-precip = scaling(omega, temp, plev, ps)  # result is 0.00140 kg/m^2/s.
+precip = scaling(omega, temp, plev, ps)  # result is 0.0014 kg/m^2/s.
 # multiply by 86400 for mm/day
 ```
