@@ -38,6 +38,7 @@ def pars(parstr):
     return par
 
 
+
 def saturation_thermodynamics(temp, plev, calc_type='simple'):
     # the effective saturation vapor pressure, specific humidity, mixing
     # ratio, and latent heat of vaporization/sublimation. Depending on
@@ -163,7 +164,6 @@ def moist_adiabatic_lapse_rate(temp, plev, calc_type):
 
     es, qs, rs, L = saturation_thermodynamics(temp, plev, calc_type);
 
-
     # cf. Holton (p. 503), obtained
     # by using rs<<1 in the more accurate expression below
     if calc_type=='simple':
@@ -173,6 +173,7 @@ def moist_adiabatic_lapse_rate(temp, plev, calc_type):
         lapse_rate      = g/cpd * (1 + rs) / (1 + cpv/cpd*rs) * (1 + L*rs / Rd / temp) / (1 + L**2 * rs * (1 + rs/gc_ratio)/(Rv * temp**2 * (cpd + rs*cpv)))
 
     return lapse_rate
+
 
 
 def integrate(f, x):
