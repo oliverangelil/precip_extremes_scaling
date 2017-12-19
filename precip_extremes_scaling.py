@@ -47,7 +47,6 @@ def saturation_thermodynamics(temp, plev, calc_type='simple'):
     #           Tetens formula.
     #    'simple': constant latent heat of condensation
 
-
     Rd = pars('gas_constant')
     Rv = pars('gas_constant_v')
     gc_ratio = Rd/Rv  # ratio of gas constants for dry air and water vapor
@@ -115,7 +114,6 @@ def saturation_thermodynamics(temp, plev, calc_type='simple'):
 
         # saturation vapor pressure
         es        = es0 * np.exp(L/Rv*(1.0/T0 - 1.0/temp))
-
         
     # saturation mixing ratio
     rs          = gc_ratio * es / (plev - es)
