@@ -184,7 +184,7 @@ def integrate(f, x):
     #    each column.
 
     dx1 = np.gradient(x)
-    dx1[0] = 0.5 * dx1[1]
+    dx1[0] = 0.5 * dx1[0]
     dx1[-1] = 0.5 * dx1[-1]
     F = np.sum(f * dx1)
 
