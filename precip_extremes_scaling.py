@@ -186,8 +186,7 @@ def integrate(f, x):
     dx1 = np.gradient(x)
     dx1[0] = 0.5 * dx1[1]
     dx1[-1] = 0.5 * dx1[-1]
-    dx2 = np.tile(dx1, (1, 1)) # why is this line needed? When would f be a matrix?? Ask Paul O'Gorman. 
-    F = np.sum(f * dx2)
+    F = np.sum(f * dx1)
 
     return F
 
