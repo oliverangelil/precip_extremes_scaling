@@ -9,10 +9,10 @@ from precip_extremes_scaling import scaling
 
 # generate dummy data for this example
 omega = np.linspace(-0.3, 0.2, 10)
-temp = np.linspace(270, 350, 10)
+temp = np.linspace(270, 220, 10)
 plev = np.linspace(100000, 10000, 10)
 ps = 100000
 
-precip = scaling(omega, temp, plev, ps)  # result is 0.0014 kg/m^2/s.
+precip = scaling(omega, temp, plev, ps)  # result is 6.1e-05 kg/m^2/s.
 # multiply by 86400 for mm/day
 ```

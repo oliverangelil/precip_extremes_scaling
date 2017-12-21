@@ -177,11 +177,8 @@ def moist_adiabatic_lapse_rate(temp, plev, calc_type):
 def integrate(f, x):
     #INTEGRATE  Computes one-dimensional integral.
     #    INTEGRATE(f, x) computes an approximation to the integral
-    #    \int f(x) dx over the range of the input vector x. The input x
-    #    must be a vector. The input f can be a column vector or a
-    #    matrix. The number of rows of f must be the same as the length
-    #    of x. If f is a matrix, a vertical integral is computed for
-    #    each column.
+    #    \int f(x) dx over the range of the input vector x. Both x
+    #    and f must be vectors. 
 
     dx1 = np.gradient(x)
     dx1[0] = 0.5 * dx1[0]
