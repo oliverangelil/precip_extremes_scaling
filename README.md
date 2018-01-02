@@ -1,6 +1,6 @@
 # precip extremes scaling
 
-Translation of Paul O'Gorman's [matlab code](http://www.mit.edu/~pog/src/precip_extremes_scaling.m) into python. Calculation is eqn. 2 in [O'Gorman and Schneider, PNAS, 106, 14773-14777, 2009](http://www.pnas.org/content/106/35/14773.abstract). Takes vertical profile of vertical velocity; vertical profile of temperature; vertical profile of pressure levels; and surface pressure, and outputs rainfall in kg/m^2/s. Results are the same as the matlab equivalent to ~4 decimal places. 
+Translation of Paul O'Gorman's [matlab code](http://www.mit.edu/~pog/src/precip_extremes_scaling.m) into python. Calculation is eqn. 2 in [O'Gorman and Schneider, PNAS, 106, 14773-14777, 2009](http://www.pnas.org/content/106/35/14773.abstract). Takes vertical profile of vertical velocity; vertical profile of temperature; vertical profile of pressure levels; and surface pressure, and outputs rainfall in kg/m^2/s. Results are the same as the matlab equivalent to ~6 decimal places. 
 
 ### Example
 ```
