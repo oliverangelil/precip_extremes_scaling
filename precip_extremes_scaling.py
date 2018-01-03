@@ -194,6 +194,12 @@ def integrate(f, x):
 
 def scaling(omega, temp, plev, ps):
 
+    try:
+        if plev[0]<plev[1]:
+            raise ValueError('unexpected ordering of pressure levels')
+    except ValueError:
+        raise
+        
     # criterion for identifying tropopause
     crit_lapse_rate = 0.002 # (k/m) for tropopause
     plev_mask = 0.05e5 # (Pa) exclude levels above this as a fail-safe
@@ -241,16 +247,3 @@ def scaling(omega, temp, plev, ps):
     precip = -integrate(-dqsat_dp_total_omega,plev)/pars('gravity')
 
     return precip
-
-
-
-
-
-
-
-
-
-
-
-
-
